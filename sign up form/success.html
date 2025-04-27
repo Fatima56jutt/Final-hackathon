@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #351F10, #7851a9); /* Updated Background to match Login and Signup */
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Floating Bubbles */
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .bubble:nth-child(1) {
+            left: 10%;
+            animation-duration: 6s;
+            animation-delay: 0s;
+        }
+
+        .bubble:nth-child(2) {
+            left: 30%;
+            width: 60px;
+            height: 60px;
+            animation-duration: 7s;
+            animation-delay: 1s;
+        }
+
+        .bubble:nth-child(3) {
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(4) {
+            left: 70%;
+            width: 70px;
+            height: 70px;
+            animation-duration: 6s;
+            animation-delay: 3s;
+        }
+
+        .bubble:nth-child(5) {
+            left: 90%;
+            width: 50px;
+            height: 50px;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Glassmorphism Card */
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: slideIn 1.5s ease-in-out forwards;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            opacity: 0;
+            animation: slideIn 1.5s ease-in-out 0.5s forwards;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border: 2px solid white;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            opacity: 0;
+            animation: slideIn 1.5s ease-in-out 1s forwards;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #7851a9;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
+
+        /* Fade In and Slide In Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <div class="container">
+        <h1>🎉 Welcome to My Website 🎉</h1>
+        <p>You have successfully logged in! Enjoy your stay. 😊</p>
+        <a href="card.html" class="btn">Explore More</a>
+    </div>
+</body>
+</html>

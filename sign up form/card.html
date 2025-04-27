@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="card.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Bright Shine</div>
+        <div class="nav-buttons" id="navButtons">
+            <button onclick="window.location.href='index.html'"><i class="fas fa-user-plus"></i> Sign-up</button> 
+            <button onclick="window.location.href='Login.html'"><i class="fas fa-sign-in-alt"></i> Login</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Task Tracker</h1>
+        
+        <div class="task-inputs">
+            <input type="text" id="taskTitle" placeholder="Task Title">
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            <input type="text" id="assignedTo" placeholder="Assigned To">
+            <button onclick="createTask()" id="submit"><i class="fas fa-plus-circle"></i> Create Task</button>
+        </div>
+
+        <div class="task-board">
+            <div id="todo" class="task-column">
+                <h2><i class="fas fa-tasks"></i> To Do</h2>
+            </div>
+            <div id="inProgress" class="task-column">
+                <h2><i class="fas fa-spinner"></i> In Progress</h2>
+            </div>
+            <div id="done" class="task-column">
+                <h2><i class="fas fa-check-circle"></i> Done</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="card.js"></script>
+</body>
+</html>
